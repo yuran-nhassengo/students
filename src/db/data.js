@@ -1,6 +1,6 @@
-export const students =([
+export const Students =([
     {
-        nome:'Yuran',
+        name:'Yuran',
         email:"yurannhassengo@gmail.com",
         assunto:"",
         mensagem:"",

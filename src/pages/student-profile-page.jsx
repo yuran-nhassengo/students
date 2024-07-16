@@ -14,9 +14,11 @@ export const StudentProfilePage = () => {
   console.log(user)
 
   return (
-    <div>
+    <div className="min-h-screen bg-gray-100">
       <Header/>
+      <main className="p-6">
       <StudentProfile name={user.name} email ={user.email}/>
+      </main>
     </div>
   )
 }

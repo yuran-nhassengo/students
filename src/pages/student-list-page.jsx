@@ -14,7 +14,7 @@ export const StudentListPage = () => {
 
   function getStudents() {
     const searchString = searchParams.get("search");
-    if (searchString === null || searchString === "") {
+    if (!searchString || searchString === "") {
       return Students;
     } else {
       return Students.filter((student) =>
@@ -34,7 +34,7 @@ export const StudentListPage = () => {
         <ul>
           {getStudents().map((student, index) => (
             <li key={index} >
-              <Link to={student.name}>{student.name}</Link>
+               <Link to={`/student-profile-page/${student.id}`}>{student.name}</Link>
             </li>
           ))}
         </ul>

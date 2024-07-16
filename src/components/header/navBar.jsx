@@ -8,7 +8,7 @@ export const NavBar = () => {
   const inactiveStyles = "text-white";
 
   return (
-    <div className='shadow-md w-full fixed top-0 left-0 '>
+    <div className='shadow-md w-full  top-0 left-0 '>
       <div className='md:flex items-center justify-between bg-blue-900 py-4 md:px-10 px-7 '>
         <div className='font-bold text-2x1 cursor-pointer
         flex items-center font-[Poppins]'>

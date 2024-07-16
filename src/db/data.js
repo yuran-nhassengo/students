@@ -1,7 +1,22 @@
 export const Students =([
     {
+        id:1,
         name:'Yuran',
         email:"yurannhassengo@gmail.com",
+        assunto:"",
+        mensagem:"",
+    },
+    {
+        id:2,
+        name:'Simão',
+        email:"It@gmail.com",
+        assunto:"",
+        mensagem:"",
+    },
+    {
+        id:3,
+        name:'Reginaldo',
+        email:"reginaldo@gmail.com",
         assunto:"",
         mensagem:"",
     }

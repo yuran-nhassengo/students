@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import {Home} from './pages/home'
+import {Home} from './pages/Home'
 import { ErrorPage } from "./pages/error-page";
 import { StudentListPage } from "./pages/student-list-page";
 import { ContactForm } from "./pages/contact-form";
+import { StudentProfilePage } from "./pages/student-profile-page";
 
 export const route = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ export const route = createBrowserRouter([
     {
         path:'/student-list-page',
         element: <StudentListPage/>,
+    },
+    {
+        path:'/student-profile-page/:id',
+        element: <StudentProfilePage/>,
     },
     {
         path:'/contact-form',

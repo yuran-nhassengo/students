@@ -22,10 +22,6 @@ export const route = createBrowserRouter([
         element: <StudentProfilePage/>,
     },
     {
-        path:'/contact-form',
-        element:<ContactForm/>,
-    },
-    {
         path:'/create-student',
         element:<CreateStudent/>,
     }

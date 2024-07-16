@@ -20,10 +20,7 @@ export const NavBar = () => {
           <div className='md:ml-8 text-xl md: space-x-4 '>
           <NavLink to={'/'} className={({isActive}) => `${isActive?activeStyles:inactiveStyles} hover:text-blue-200`}>Home</NavLink>
           <NavLink to={'/student-list-page'} className={({isActive}) => `${isActive?activeStyles:inactiveStyles} hover:text-blue-200`}>Student</NavLink>
-          <NavLink to={'/contact-form'} className={({isActive}) => `${isActive?activeStyles:inactiveStyles} hover:text-blue-200`}>Contact</NavLink>
-           {/* <Button>
-            Get Started
-           </Button> */}
+      
           </div>
       </div>
     </div>

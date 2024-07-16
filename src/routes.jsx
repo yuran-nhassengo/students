@@ -5,6 +5,7 @@ import { ErrorPage } from "./pages/error-page";
 import { StudentListPage } from "./pages/student-list-page";
 import { ContactForm } from "./pages/contact-form";
 import { StudentProfilePage } from "./pages/student-profile-page";
+import { CreateStudent } from "./pages/create-student";
 
 export const route = createBrowserRouter([
     {
@@ -23,5 +24,9 @@ export const route = createBrowserRouter([
     {
         path:'/contact-form',
         element:<ContactForm/>,
+    },
+    {
+        path:'/create-student',
+        element:<CreateStudent/>,
     }
 ])

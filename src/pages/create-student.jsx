@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import { Students } from '../db/data'; 
 import { Header } from '../components/header'; 
+import { StudentContext } from '../components/context/student-context';
 
 export const CreateStudent = () => {
  
-  const [students, setStudents] = useState(Students);
+  const { addStudent } = useContext(StudentContext);
 
  
   const [formData, setFormData] = useState({
@@ -34,7 +35,7 @@ export const CreateStudent = () => {
     
    
     const addedStudent = { ...formData };
-    setStudents([...students, addedStudent]);
+    addStudent (addedStudent);
 
    
     setNewStudent(addedStudent);

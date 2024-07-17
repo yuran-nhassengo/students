@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 
 
@@ -7,29 +7,15 @@ import { SearchStudent } from '../components/student/searchStudent'
 
 import {Students } from '../db/data'
 import { StudentList } from '../components/student/studentList'
+import { StudentContext } from '../components/context/student-context'
 
 
 export const StudentListPage = () => {
 
-  const  [searchParams] = useSearchParams();
-  const [students, setStudents] = useState(Students);
+  const { students, getStudents, handleRemove } = useContext(StudentContext);
+  const [searchParams] = useSearchParams();
 
-  function getStudents() {
-    const searchString = searchParams.get("search");
-    if (!searchString || searchString === "") {
-      return students;
-    } else {
-      return students.filter((student) =>
-        student.name.toLowerCase().includes(searchString.toLowerCase())
-      );
-    }
-  }
-
-  const handleRemove = (studentId) => {
-    setStudents(students.filter(student => student.id !== studentId));
-  };
-
-  getStudents();
+  const searchString = searchParams.get("search");
 
   return (
     <div>
@@ -43,7 +29,7 @@ export const StudentListPage = () => {
             </button>
         </Link>
         <ul className="space-y-4">
-          {getStudents().map((student) => (
+          {getStudents(searchString).map((student) => (
             <li key={student.id}>
               <StudentList
                 id={student.id}

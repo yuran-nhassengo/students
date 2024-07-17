@@ -20,8 +20,14 @@ export const StudentProvider = ({ children }) => {
     setStudents(students.filter(student => student.id !== studentId));
   };
 
+  // const addStudent = (student) => {
+  //   setStudents([...students, student]);
+  // };
+
   const addStudent = (student) => {
-    setStudents([...students, student]);
+    const newId = students.length > 0 ? Math.max(...students.map(s => s.id)) + 1 : 1;
+    const newStudent = { id: newId, ...student };
+    setStudents([...students, newStudent]);
   };
 
   return (
